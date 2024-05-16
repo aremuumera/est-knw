@@ -1,0 +1,165 @@
+@import '../variables';
+@import '~bootstrap/scss/bootstrap';
+@import '~@fontsource/sen/800.css';
+@import '~@fontsource/open-sans/300.css';
+@import '~@fontsource/open-sans/400.css';
+@import '~@fontsource/open-sans/600.css';
+@import '~@fontsource/open-sans/700.css';
+@import '~@fontsource/open-sans/800.css';
+@import '~@fortawesome/fontawesome-free/css/all';
+
+html,
+body {
+  color: $white;
+  background: $dark;
+  font-family: 'Open Sans';
+  font-weight: 600;
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-thumb:vertical {
+    margin: 5px;
+    background-color: #999;
+    border-radius: 5px;
+  }
+  &::-webkit-scrollbar-button:start:decrement,
+  &::-webkit-scrollbar-button:end:increment {
+    height: 5px;
+    display: block;
+  }
+}
+
+.App {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+
+  a {
+    text-decoration: none;
+    outline: 0;
+  }
+
+  .btn {
+    box-shadow: none;
+    &.active,
+    &.active:focus,
+    &.active:active:focus,
+    &:not(:disabled):not(.disabled).active:focus,
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    padding: 10px 50px;
+
+    @media screen and (max-width: 1200px) {
+      flex-direction: column;
+      padding: 0;
+    }
+
+    .logo {
+      font-family: 'Sen';
+      font-size: 30px;
+      font-weight: 800;
+      text-decoration: none;
+      width: 150px;
+      display: flex;
+      margin-right: auto;
+      padding: 20px 30px 20px 0;
+      &.active {
+        color: $primary;
+      }
+
+      @media screen and (max-width: 1200px) {
+        margin: 0;
+        padding: 20px 0 0;
+        width: auto;
+      }
+    }
+
+    a {
+      padding: 15px 15px;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      &.active {
+        color: white;
+      }
+      &:last-of-type {
+        padding-right: 0;
+      }
+
+      svg {
+        margin-right: 5px;
+      }
+    }
+
+    .user-account {
+      margin-left: 30px;
+      border-radius: 4px;
+      background: rgba(black, 0.2);
+      padding: 15px;
+      cursor: default;
+
+      @media screen and (max-width: 1200px) {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+      }
+
+      .user-picture {
+        width: 40px;
+        border-radius: 4px;
+        margin-right: 15px;
+      }
+
+      .user-name {
+        margin-right: 15px;
+      }
+
+      .sign-out {
+        cursor: pointer;
+        &:hover {
+          color: darken($white, 10);
+        }
+      }
+    }
+  }
+
+  main {
+    display: flex;
+    padding: 0 50px 50px;
+    flex-grow: 1;
+    align-items: flex-start;
+
+    @media screen and (max-width: 1200px) {
+      padding: 0 0 20px;
+    }
+  }
+}
+
+.modal .modal-content {
+  background: $dark;
+  .close {
+    text-shadow: none;
+    color: $white;
+  }
+  pre {
+    color: white;
+    font-weight: normal;
+  }
+  .modal-footer {
+    .btn {
+      box-shadow: none;
+    }
+    .btn-dark {
+      margin-right: auto;
+    }
+  }
+}

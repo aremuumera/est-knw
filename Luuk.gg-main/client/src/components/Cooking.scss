@@ -1,0 +1,114 @@
+@import '../variables';
+
+.Cooking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 -20px;
+  flex-grow: 1;
+
+  @media screen and (max-width: 1200px) {
+    margin: 0;
+  }
+
+  .sub-menu {
+    border-radius: 8px;
+    background: rgba(black, 0.2);
+    padding: 0 20px 0 30px;
+    margin-bottom: 15px;
+    align-items: center;
+    width: calc(100% - 40px);
+    display: flex;
+
+    @media screen and (max-width: 1200px) {
+      width: 100%;
+      flex-wrap: wrap;
+      align-items: center;
+      padding-bottom: 20px;
+      justify-content: center;
+    }
+
+    h1 {
+      font-weight: 600;
+      font-size: 20px;
+      margin: 0 auto 0 0;
+      height: 67px;
+      display: flex;
+      align-items: center;
+
+      @media screen and (max-width: 1200px) {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .spinner-border {
+        margin-left: 20px;
+      }
+    }
+
+    .btn {
+      margin-left: 12px;
+      box-shadow: none;
+
+      @media screen and (max-width: 1200px) {
+        margin: 5px 20px 0;
+      }
+    }
+  }
+
+  .filters {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    margin-bottom: 15px;
+    width: calc(100% - 40px);
+    padding: 0 5px;
+    justify-content: flex-end;
+
+    @media screen and (max-width: 1200px) {
+      padding: 0;
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      margin: 10px 0;
+    }
+
+    .form-check-input {
+      margin-top: 6px;
+    }
+
+    label,
+    .form-group {
+      margin: 0;
+    }
+
+    > small {
+      height: 18px;
+      margin: 0 15px 0 30px;
+
+      @media screen and (max-width: 1200px) {
+        display: none;
+      }
+    }
+
+    .btn {
+      margin-right: 15px;
+      text-transform: capitalize;
+
+      @media screen and (max-width: 1200px) {
+        margin: 0 0 10px;
+        width: 200px;
+      }
+    }
+  }
+
+  .recipes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    &.opened {
+      align-items: flex-start;
+    }
+  }
+}

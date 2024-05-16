@@ -1,0 +1,22 @@
+@import '../variables';
+
+.Restaurants {
+  display: flex;
+  width: 100%;
+  padding: 50px;
+  justify-content: center;
+
+  .table {
+    th {
+      border: 0;
+      color: $white;
+    }
+    td {
+      border-top: 1px solid rgba($white, 0.2);
+      color: $white;
+      &.nowrap {
+        white-space: nowrap;
+      }
+    }
+  }
+}
